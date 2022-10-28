@@ -1,6 +1,7 @@
 "use strict";
 import { BASE_URL } from "./constants";
-import axios from 'axios';
+import axios from "axios";
+
 import { FactDefinition, FactsDefinition } from "./types";
 
 
