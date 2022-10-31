@@ -1,33 +1,25 @@
-name: Production Bulld test
-
-on:  #Triggers of the workflow
+name: Production Build test
+on:
   pull_request:
     branches:
       - master
-
-jobs: 
-  Test build:
-    runs-on: ubuntu-latest  #O.S. Selection
-    steps: 
+jobs:
+  Test Build:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        with: 
+        with:
           node-version: "16"
-
       - name: Install Dependencies
         run: npm install
-
       - name: Test Lint
         run: npm run lint
-
-      - name: Test Coverage
+      - name: Test coverage
         run: npm run test:coverage
-
       - name: Build
         run: npm run build
-
-      - name: Execute Build 
+      - name: Execute Build
         run: cd build && node index.js
-
-      - name: Upload Results 
-        run: npm run upload  
+      - name: Upload results
+        run: npm run upload
