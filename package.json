@@ -8,8 +8,8 @@
     "build2": "npm run test:coverage && tsc",
     "test": "cd src && jest --",
     "test:coverage": "jest --coverage --watchAll=false",
-    "lint": "eslint --cache . --ext ts,tsx",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint --cache . --ext ts,tsx"
   },
   "author": "Blad",
   "license": "MIT",

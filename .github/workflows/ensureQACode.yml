@@ -4,7 +4,7 @@ on:  #Triggers of the workflow
   push:
   pull_request:
     branches:
-      - includeCI
+      - badSource
 
 jobs: 
   test-ci-job:
